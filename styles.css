@@ -1,0 +1,230 @@
+@font-face {
+  font-family: 'gotham_mediumregular';
+  src: url('fonts/gotham_medium_regular-webfont.woff2') format('woff2'),
+       url('fonts/gotham_medium_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+html, body, main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+    background: linear-gradient(45deg,#ff96ec,#fffd8b,#50dcff );
+    background-size: 800%;
+    animation: gradient 6s linear infinite;
+    animation-direction: alternate;
+    /* this line fixes the gradient splitting in 2 */
+    background-attachment: fixed;
+}
+@keyframes gradient{
+  0% {background-position: 0%;}
+  100% {background-position: 100%;}
+}
+
+
+.text {
+    font-family: 'gotham_mediumregular';
+    color: rgba(255, 0, 0, 0.685);
+}
+
+#text-box {
+  padding-left: 25%;
+  padding-top: 22%;
+  margin: 0;
+  width: 70%;
+  display: block;
+}
+
+#h1 {
+  font-size: 3em;
+  margin: 0;
+  text-align: left;
+}
+
+#h2 {
+  font-size: 1.6em;
+  margin: 0;
+  text-align: left;
+  padding-right: 35%;
+}
+
+:root {
+    --bg: #dcdde1;     
+    --one: #47fc5681;
+    --two: #3292ff7e;
+    --three: #e4405e62;
+  }
+  
+  section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    background: var(--bg);
+    z-index: -10;
+  }
+  #icon-box {
+    animation: float 6s ease-in-out infinite;
+    display: block;
+    margin: 0;
+    padding-bottom: 40%;
+    width: 100%;
+      
+  }
+
+  .icon-list {
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 35%;
+    padding-right: 30%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .icon-item {
+    list-style: none
+  }
+  
+  .icon-link {  
+    display: inline-flex;
+    font-size: 3rem;  
+    text-decoration: none;  
+    width: 6rem;
+    height: 6rem;   
+    transition: .5s linear;
+    position: relative;
+    z-index: 1;
+    margin: auto
+  }
+  
+  .icon-link:hover {
+    color: #fff;
+  }
+  
+  .icon-link i {
+    margin: auto;    
+  }
+  
+  .icon-link::before {  
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 6rem;
+    height: 6rem;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+  }
+    
+  .icon-link:hover::before {  
+    transform: scale(1);
+  }
+  
+  .icon-item:nth-child(1) a:hover:before { 
+    background: var(--one); 
+  }
+  
+  .icon-item:nth-child(2) a:hover:before { 
+    background: var(--two); 
+  }
+  
+  .icon-item:nth-child(3) a:hover:before { 
+    background: var(--three); 
+  }
+
+  .icon-link>.far {  
+    transition: transform 0.35s ease;
+  }
+  .icon-link:hover>.far {  
+    transform: scale(1.5);
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+ 
+  #songwrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #song {
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .child{
+    text-align: center;
+    font: normal 20px courier,monospace;
+    padding-bottom: 5px;
+    padding-top: 3px;
+  }
+
+  .fab{
+    padding-top: 5px;
+    font-size: 3;
+    transition: transform 0.35s ease;
+  }
+  .fab.hover::before{
+    transform: scale(1.0);
+  }
+  .fab:hover {
+    transform: scale(1.3);
+  }
+  
+  #floatImg {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box; 
+    box-shadow: 0 10px 25px 0px rgba(0,0,0,0.6);
+  }
+
+  #back {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+
+  #back.hover::before{
+    transform: scale(1.0);
+  }
+  #back:hover {
+    transform: scale(1.3);
+  }
+
+
+  #spotify {
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+
+  #spotify.hover::before{
+    transform: scale(1.0);
+  }
+  #spotify:hover {
+    transform: scale(1.3);
+  }
+
+

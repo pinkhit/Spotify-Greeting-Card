@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lorem ipsum</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a5ec8ac6d2.js" crossorigin="anonymous"></script>
+  <script src="libraries/p5.min.js"></script>
+  <script type="text/javascript">
+    function hideSongwrapper() {
+      document.getElementById("songwrapper").style.display = "none";
+    }
+    window.onload = hideSongwrapper;
+  </script>
+</head>
+
+<body>
+  <script src="script.js"></script>
+  <main>
+    <div class ="container">
+      <form action="">
+          <input type="hidden" id='hidden_token'>
+      </form>
+
+      <form action="">
+        <input type="hidden" id='imgURL'>
+    </form>
+  </div>
+
+    <div id='text-box'>
+      <!-- message here -----------------     __φ(．．)     ---------------------------->
+      <h1 id='h1' class="text">Hi 👋 </h1>
+      <h2 id='h2' class='text'>Pick an emoji and I'll recommend you a song</h2>
+    </div>
+
+    <div id='icon-box'>
+      <ul class="icon-list">
+        <!-- emojis here, enter UTF-8 value or type it out  ------  __φ(．．)  --------->
+        <li class="icon-item">
+          <a href="#1" class="icon-link"><i class='far'>&#128519</i></a>
+        </li>
+        <li class="icon-item">
+          <a href="#2" class="icon-link"><i class='far'>&#128564</i></a>
+        </li>
+        <li class="icon-item">
+          <a href="#3" class="icon-link"><i class='far'>&#128520</i></a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="songwrapper">
+      <div id="song">
+      </div>
+    </div>
+
+  </main>
+</body>
+
+</html>
