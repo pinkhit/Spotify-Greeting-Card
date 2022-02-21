@@ -38,13 +38,13 @@ const APIController = (() => {
 
     /*// 
 
-    ENTER PLAYLIST ID HERE                                          __φ(．．)
+    ENTER CLIENT ID HERE                                          __φ(．．)
 
     //*/
   const client_id = '';
     /*// 
 
-    ENTER PLAYLIST ID HERE                                          __φ(．．)
+    ENTER CLIENT SECRET HERE                                          __φ(．．)
 
     //*/
   const client_secret = '';
